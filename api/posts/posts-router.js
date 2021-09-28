@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
   } else {
     Post.insert(req.body)
       .then(post => {
-        res.status(201).json(req.body)
+        res.status(201).json(post)
       })
       .catch(err => {
         console.log(err)
